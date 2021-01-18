@@ -24,3 +24,5 @@ The goal of this fork is to make the Asus Tinker Board S compatible with the Ret
 
 If you want to compile this projet type this command : 
 PROJECT=Rockchip DEVICE=TinkerBoard ARCH=arm make -j$(nproc) image
+
+Then use this script => https://gist.github.com/Eternln00b/1fbc89d2cbfd2ef4363fd28dd50ebb6f to install the safe shutdown script
