@@ -21,5 +21,6 @@ Please refer to our website http://www.lakka.tv/get on how to setup Lakka.
 # notes from Eternln00b
 
 The goal of this fork is to make the Asus Tinker Board S compatible with the Retroflag Boxes ( B/2B/3B/3B+ ).
+
 If you want to compile this projet type this command : 
-" PROJECT=Rockchip DEVICE=TinkerBoard ARCH=arm make -j$(nproc) image "
+PROJECT=Rockchip DEVICE=TinkerBoard ARCH=arm make -j$(nproc) image
