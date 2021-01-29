@@ -31,3 +31,4 @@ PROJECT=Rockchip DEVICE=TinkerBoard ARCH=arm make -j$(nproc) image
 Then use this installation script => https://gist.github.com/Eternln00b/1fbc89d2cbfd2ef4363fd28dd50ebb6f to install the safe shutdown script
 
 ![alt text](https://a404dded.files.wordpress.com/2021/01/sergte-2.png?w=540)
+![alt_text](https://a404dded.files.wordpress.com/2021/01/back.png?w=540)
