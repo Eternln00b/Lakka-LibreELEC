@@ -20,7 +20,7 @@ Please refer to our website http://www.lakka.tv/get on how to setup Lakka.
 
 # notes from Eternln00b
 
-![alt text](https://a404dded.files.wordpress.com/2021/01/sergte.png?w=664)
+![alt text](https://a404dded.files.wordpress.com/2021/01/sergte.png?w=540)
 
 The goal of this fork is to make the Asus Tinker Board and Tinker Board S compatibles with the Retroflag Boxes ( NESPi Case PLUS, SUPERPi CASE-U, SUPERPi CASE-J, MEGAPi CASE ).
 
@@ -30,4 +30,4 @@ PROJECT=Rockchip DEVICE=TinkerBoard ARCH=arm make -j$(nproc) image
 
 Then use this installation script => https://gist.github.com/Eternln00b/1fbc89d2cbfd2ef4363fd28dd50ebb6f to install the safe shutdown script
 
-![alt text](https://a404dded.files.wordpress.com/2021/01/sergte-2.png?w=664)
+![alt text](https://a404dded.files.wordpress.com/2021/01/sergte-2.png?w=540)
