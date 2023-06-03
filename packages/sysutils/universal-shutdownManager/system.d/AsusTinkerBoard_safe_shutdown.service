@@ -1,0 +1,12 @@
+[Unit]
+Description=Asus Tinker Board safe shutdown for retroflag boxes
+
+[Service]
+ExecStart=python /usr/bin/AsusTinkerBoard_SafeShutdown.py
+TimeoutStopSec=5
+Restart=always
+RestartSec=5
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target

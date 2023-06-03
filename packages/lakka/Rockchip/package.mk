@@ -26,6 +26,11 @@ PKG_LICENSE="GPL"
 PKG_SITE="https://github.com/lakkatv/Lakka"
 PKG_URL=""
 PKG_DEPENDS_TARGET="retroarch"
+
+if [ "$DEVICE" = "TinkerBoard" ] ; then
+  PKG_DEPENDS_TARGET+=" universal-shutdownManager python-TinkerBoard-gpio-lib-python wiringPiTinkerBoard"
+fi
+
 PKG_PRIORITY="optional"
 PKG_SECTION="virtual"
 PKG_SHORTDESC="Lakka metapackage for Rockchip"

@@ -1,0 +1,33 @@
+#!/bin/bash
+
+PreActions () {
+	
+	systemctl stop retroarch
+    reset
+    echo 0 > /sys/devices/virtual/vtconsole/vtcon1/bind
+	mount -o ro,remount /storage
+
+}
+
+while getopts ":PR" options ; do
+	case $options in
+
+		P)
+
+            PreActions
+			shutdown -P now &		
+			;;
+
+		R)
+
+            PreActions
+            reboot	
+			;;
+
+        *)
+
+			echo "Usage : shutdownManager -R ( to reboot ) or shutdownManager -P ( to shutdown )" 	
+			;;
+
+	esac
+done
