@@ -361,7 +361,7 @@ DISTRO_SRC="http://sources.libreelec.tv/$LIBREELEC_VERSION"
     fi
   elif [ "$PROJECT" = "Amlogic" -o "$PROJECT" = "Rockchip" -o "$PROJECT" = "Allwinner" ]; then
     LIBRETRO_CORES="${LIBRETRO_CORES// yabasanshiro /}"
-    if [ "$UBOOT_SYSTEM" = "tinker" -o "$UBOOT_SYSTEM" = "tinker-s" ]; then
+    if [ "$DEVICE" = "TinkerBoard" ]; then
       LIBRETRO_CORES="${LIBRETRO_CORES// beetle_saturn /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// bsnes /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// bsnes_hd /}"
