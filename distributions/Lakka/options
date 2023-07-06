@@ -127,7 +127,7 @@
   NANO_EDITOR="yes"
 
 # cron support (yes / no)
-  CRON_SUPPORT="yes"
+  CRON_SUPPORT="no"
 
 # Distribution Specific source location
 DISTRO_MIRROR="http://sources.libreelec.tv/mirror"
@@ -339,6 +339,7 @@ DISTRO_SRC="http://sources.libreelec.tv/$LIBREELEC_VERSION"
       LIBRETRO_CORES="${LIBRETRO_CORES// parallel-n64 /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// ppsspp /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// puae /}"
+      LIBRETRO_CORES="${LIBRETRO_CORES// sameduck /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// snes9x2005_plus /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// snes9x2005 /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// snes9x2010 /}"
@@ -360,21 +361,33 @@ DISTRO_SRC="http://sources.libreelec.tv/$LIBREELEC_VERSION"
     fi
   elif [ "$PROJECT" = "Amlogic" -o "$PROJECT" = "Rockchip" -o "$PROJECT" = "Allwinner" ]; then
     LIBRETRO_CORES="${LIBRETRO_CORES// yabasanshiro /}"
-    if [ "$DEVICE" = "TinkerBoard" ]; then
+    if [ "$UBOOT_SYSTEM" = "tinker" -o "$UBOOT_SYSTEM" = "tinker-s" ]; then
+      LIBRETRO_CORES="${LIBRETRO_CORES// beetle_saturn /}"
+      LIBRETRO_CORES="${LIBRETRO_CORES// bsnes_hd /}"
+      LIBRETRO_CORES="${LIBRETRO_CORES// bsnes-mercury /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// dolphin /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// dosbox-pure /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// dosbox-svn /}"
+      LIBRETRO_CORES="${LIBRETRO_CORES// flycast /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// fuse-libretro /}"
+      LIBRETRO_CORES="${LIBRETRO_CORES// higan_sfc /}"
+      LIBRETRO_CORES="${LIBRETRO_CORES// higan_sfc_balanced /}"
+      LIBRETRO_CORES="${LIBRETRO_CORES// kronos /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// mame2015 /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// pcsx2 /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// play /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// potator /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// ppsspp /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// px68k /}"
+      LIBRETRO_CORES="${LIBRETRO_CORES// sameduck /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// scummvm /}"
+      LIBRETRO_CORES="${LIBRETRO_CORES// snes9x /}"
+      LIBRETRO_CORES="${LIBRETRO_CORES// swanstation /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// tic80 /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// vice /}"
       LIBRETRO_CORES="${LIBRETRO_CORES// wasm4 /}"
+      LIBRETRO_CORES="${LIBRETRO_CORES// yabasanshiro /}"
+      LIBRETRO_CORES="${LIBRETRO_CORES// yabause /}"
     fi
   elif [ "$PROJECT" = "Generic" -a "$ARCH" = "i386" ]; then
     LIBRETRO_CORES="${LIBRETRO_CORES// openlara /}"

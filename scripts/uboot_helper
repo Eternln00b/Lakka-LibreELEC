@@ -156,10 +156,18 @@ devices = \
     },
   },
   'Rockchip': {
-    'MiQi': {
-      'rk3288': {
+    'RK3288': {
+      'miqi': {
         'dtb': 'rk3288-miqi.dtb',
-        'config': 'miqi-rk3288_config'
+        'config': 'miqi-rk3288_defconfig'
+      },
+      'tinker': {
+        'dtb': 'rk3288-tinker.dtb',
+        'config': 'tinker-rk3288_defconfig'
+      },
+      'tinker-s': {
+        'dtb': 'rk3288-tinker-s.dtb',
+        'config': 'tinker-rk3288_defconfig'
       },
     },
     'OdroidGoAdvance': {
@@ -230,12 +238,6 @@ devices = \
       'sapphire': {
         'dtb': 'rk3399-sapphire.dtb',
         'config': 'evb-rk3399_config'
-      },
-    },
-    'TinkerBoard': {
-      'rk3288': {
-        'dtb': 'rk3288-miniarm.dtb',
-        'config': 'tinker-rk3288_config'
       },
     },
   },

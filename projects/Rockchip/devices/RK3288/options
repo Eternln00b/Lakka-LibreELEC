@@ -1,0 +1,42 @@
+################################################################################
+# setup device defaults
+################################################################################
+
+  # The TARGET_CPU variable controls which processor should be targeted for
+  # generated code.
+    case $TARGET_ARCH in
+      arm)
+        TARGET_FLOAT="hard"
+        TARGET_CPU="cortex-a17"
+        TARGET_FPU="neon-vfpv4"
+        TARGET_FEATURES="32bit"
+        ;;
+    esac
+
+  # Kernel target
+    KERNEL_TARGET="zImage"
+
+  # Additional kernel make parameters (for example to specify the u-boot loadaddress)
+    KERNEL_MAKE_EXTRACMD=""
+    
+    if [ "${UBOOT_SYSTEM}" = "tinker" ]; then
+      KERNEL_MAKE_EXTRACMD+=" rk3288-tinker.dtb"
+    elif [ "${UBOOT_SYSTEM}" = "tinker-s" ]; then
+      KERNEL_MAKE_EXTRACMD+=" rk3288-tinker-s.dtb"
+    else
+      KERNEL_MAKE_EXTRACMD+=" rk3288-miqi.dtb"
+    fi
+
+  # Mali GPU family
+    MALI_FAMILY="t760"
+
+  # kernel serial console
+    EXTRA_CMDLINE="console=uart8250,mmio32,0xff690000 console=tty0 coherent_pool=2M cec.debounce_ms=5000"
+
+  # Lakka: hardcode output resolution to 1080p
+    if [ "${DISTRO}" = "Lakka" ]; then
+      EXTRA_CMDLINE+=" video=HDMI-A-1:1920x1080@60"
+    fi
+
+  # set the addon project
+    ADDON_PROJECT="ARMv7"
