@@ -5,9 +5,6 @@
   # Bootloader to use (syslinux / u-boot / bcm2835-bootloader)
     BOOTLOADER="u-boot"
 
-  # U-Boot make target
-    UBOOT_TARGET="u-boot-dtb.bin"
-
   # U-Boot firmware package(s) to use
     UBOOT_FIRMWARE="rkbin"
 
@@ -31,9 +28,6 @@
 
   # build and install ALSA Audio support (yes / no)
     ALSA_SUPPORT="yes"
-  
-  # build and install ALSA Audio support (yes / no)
-    PULSEAUDIO_SUPPORT="no"
 
   # OpenGL(X) implementation to use (no / mesa)
     OPENGL="no"
