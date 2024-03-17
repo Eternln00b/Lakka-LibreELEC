@@ -82,7 +82,6 @@ elif [ "$OPENGLES" = "odroidc1-mali" ] || [ "$OPENGLES" = "opengl-meson" ] || [ 
 elif [ "$OPENGLES" = "gpu-viv-bin-mx6q" ] || [ "$OPENGLES" = "imx-gpu-viv" ]; then
   RETROARCH_GL="--enable-opengles --disable-kms --disable-x11 --enable-vivante_fbdev"
 elif [ "$OPENGLES" = "libmali" ]; then
-  # RETROARCH_GL="--enable-opengles --enable-kms --disable-x11 --disable-wayland"
   RETROARCH_GL="--enable-opengles --enable-kms --disable-x11 --disable-wayland --enable-opengles3 --enable-opengles3_1 --enable-opengles3_2"
 elif [ "$OPENGLES" = "bcm2835-driver" ]; then
   RETROARCH_GL="--enable-opengles --disable-kms --disable-x11 --disable-wayland --enable-videocore --enable-dispmanx --disable-opengl --enable-egl"
@@ -94,8 +93,6 @@ elif [ "$OPENGLES" = "mesa" ]; then
     if [ "${DEVICE:0:4}" = "RPi4" ]; then
       RETROARCH_GL+=" --enable-opengles3 --enable-opengles3_1"
     fi
-  elif [ "$DEVICE" = "TinkerBoard" ]; then
-    RETROARCH_GL="--enable-kms --enable-vulkan --enable-opengles --enable-opengles3 --enable-opengles3_1 --enable-opengles3_2 --disable-x11 --disable-wayland"
   elif [ "$PROJECT" = "Generic" ]; then
     RETROARCH_GL="--enable-opengles --enable-kms --disable-x11 --enable-egl --disable-wayland --enable-vulkan"
   else
