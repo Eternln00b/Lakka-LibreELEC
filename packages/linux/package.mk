@@ -16,10 +16,17 @@ PKG_STAMP="$KERNEL_TARGET $KERNEL_MAKE_EXTRACMD"
 PKG_PATCH_DIRS="$LINUX"
 
 case "$LINUX" in
-  rockchip-4.4)
-    PKG_VERSION="8394b6656aeea884ae576a85c11d6280595445fd"
-    PKG_URL="https://github.com/mrfixit2001/rockchip-kernel/archive/$PKG_VERSION.tar.gz"
-    PKG_SOURCE_NAME="linux-$LINUX-$PKG_VERSION.tar.gz"
+  rockchip)
+    if [ "$DEVICE" = "TinkerBoard" ]; then
+      PKG_VERSION="tinker_board-debian-3.0.11"
+      PKG_SHA256="f04d1a97d77ae2472a4bc07671747816497d186b681b1a3681db84d513acda33"
+      PKG_URL="https://github.com/TinkerBoard/debian_kernel/archive/refs/tags/$PKG_VERSION.tar.gz"
+      PKG_SOURCE_NAME="linux-$LINUX-$PKG_VERSION.tar.gz"
+    else
+      PKG_VERSION="8394b6656aeea884ae576a85c11d6280595445fd"
+      PKG_URL="https://github.com/mrfixit2001/rockchip-kernel/archive/$PKG_VERSION.tar.gz"
+      PKG_SOURCE_NAME="linux-$LINUX-$PKG_VERSION.tar.gz"
+    fi
     ;;
   odroidgoA-4.4)
     PKG_VERSION="fbfe5c30bf5643f44cc8c87c9b53b1ba2a0bfa49"

@@ -21,7 +21,7 @@
     KERNEL_TARGET="zImage"
 
   # Additional kernel make parameters (for example to specify the u-boot loadaddress)
-    KERNEL_MAKE_EXTRACMD="rk3288-miniarm.dtb"
+    KERNEL_MAKE_EXTRACMD="rk3288-tinker_board.dtb"
 
   # Mali GPU family
     MALI_FAMILY="t760"
