@@ -28,7 +28,7 @@ PKG_URL=""
 PKG_DEPENDS_TARGET="retroarch"
 
 if [ "$DEVICE" = "TinkerBoard" ] ; then
-  PKG_DEPENDS_TARGET+=" universal-shutdownManager python-TinkerBoard-gpio-lib-python wiringPiTinkerBoard"
+  PKG_DEPENDS_TARGET+=" universal-shutdownManager python-TinkerBoard-gpio-lib-python wiringPiTinkerBoard retroarch-joypad-autoconfig"
 fi
 
 PKG_PRIORITY="optional"
