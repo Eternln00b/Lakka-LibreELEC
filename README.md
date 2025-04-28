@@ -22,5 +22,5 @@ Please refer to our website http://www.lakka.tv/get on how to setup Lakka.
 ## notes from 28-04-2025
 
 The purpose of this project was to make the retroflag cases ( early models ) fully functional with an Asus tinker board. 
-Link to the sample section: [Lakka ( v3.7.4 ) : safe shutdown with asus tinker board](https://www.youtube.com/shorts/GZkLRtHEAjo).
+[Lakka ( v3.7.4 ) : safe shutdown with asus tinker board](https://www.youtube.com/shorts/GZkLRtHEAjo).
 The safe shutdown works out of the box
